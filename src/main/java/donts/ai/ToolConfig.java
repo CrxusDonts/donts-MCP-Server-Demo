@@ -9,14 +9,18 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ToolConfig {
+    /**
+     * 所有的工具
+     * @param weatherMcpServer 查询天气
+     * @param calculatorMcpServer 计算
+     * @return ToolProvider
+     */
     @Bean
-    public ToolCallbackProvider weatherTools(WeatherMcpServer weatherMcpServer) {
-        return MethodToolCallbackProvider.builder().toolObjects(weatherMcpServer).build();
+    public ToolCallbackProvider allDemoToolsProvider(WeatherMcpServer weatherMcpServer
+            , CalculatorMcpServer calculatorMcpServer) {
+        return MethodToolCallbackProvider.builder().toolObjects(weatherMcpServer
+                , calculatorMcpServer).build();
     }
 
-    @Bean
-    public ToolCallbackProvider calculatorTools(CalculatorMcpServer calculatorMcpServer) {
-        return MethodToolCallbackProvider.builder().toolObjects(calculatorMcpServer).build();
-    }
 
 }
