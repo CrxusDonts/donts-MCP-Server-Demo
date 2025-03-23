@@ -128,8 +128,8 @@ mvn clean package
 
 1. demo使用了和风天气的API，调用查询服务前，需要在application.properties中配置和风天气API密钥,到[和风天气控制台](https://console.qweather.com/#/console)申请APIKey
 ,每天有免费的调用次数，用来做个demo已经够用了
-2. 这个小demo参考了Spring AI官方示例：https://github.com/spring-projects/spring-ai-examples/blob/main/model-context-protocol/weather/starter-stdio-server/README.md
-
+2. 这个小demo参考了Spring [AI官方示例](https://github.com/spring-projects/spring-ai-examples/blob/main/model-context-protocol/weather/starter-stdio-server/README.md
+   )
 ## 参考资料
 
 - [Spring AI官方文档](https://docs.spring.io/spring-ai/reference/index.html)
