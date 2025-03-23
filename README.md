@@ -1,8 +1,8 @@
 # Spring AI MCP Server 示例项目
 
-这个项目展示了如何使用Spring AI框架实现一个简单的Model Context Protocol (MCP) Server，包含两个功能模块：计算器服务和天气查询服务。
+这个demo使用Spring AI框架实现一个简单的Model Context Protocol (MCP) Server，包含两个功能模块：计算器服务和天气查询服务。
 
-## 项目介绍
+## demo介绍
 
 Model Context Protocol (MCP) 是Spring AI提供的一种协议，允许大语言模型(LLM)通过标准化的接口调用外部工具和服务。这个Demo实现了两个MCP服务：
 
@@ -47,7 +47,7 @@ src/main/java/donts/ai/
 天气查询服务使用和风天气API获取城市的实时天气信息。首先通过城市名称查询城市ID，然后使用城市ID获取实时天气数据。
 
 示例：
-- 输入：`北京`
+- 输入：`昆明`
 - 输出：城市北京的实时天气信息（JSON格式）
 
 ## 配置说明
