@@ -1,8 +1,8 @@
 package donts.ai.calculator;
 
+import donts.ai.demo.calculator.CalculatorFunctionRequest;
+import donts.ai.demo.calculator.CalculatorMcpServer;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorMcpServerTest {
 

@@ -1,4 +1,4 @@
-package donts.ai.weather;
+package donts.ai.demo.weather;
 
 import cn.hutool.http.HttpResponse;
 import cn.hutool.http.HttpUtil;
@@ -8,6 +8,7 @@ import jakarta.annotation.Resource;
 import lombok.Cleanup;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.tool.annotation.Tool;
+import org.springframework.ai.tool.annotation.ToolParam;
 import org.springframework.stereotype.Service;
 
 @Slf4j
@@ -18,7 +19,7 @@ public class WeatherMcpServer {
     private WeatherApiProperties weatherApiProperties;
 
     @Tool(description = "获取某个城市的实时天气")
-    public String getWeather(WeatherFunctionRequest request) {
+    public String getWeather(@ToolParam(description = "参数对象") WeatherFunctionRequest request) {
         String city = request.city();
         log.info("开始获取天气，城市：{}", city);
         // 先调用城市搜索接口，查询到该城市的locationId

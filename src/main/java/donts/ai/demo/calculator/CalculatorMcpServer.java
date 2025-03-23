@@ -1,7 +1,8 @@
-package donts.ai.calculator;
+package donts.ai.demo.calculator;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.tool.annotation.Tool;
+import org.springframework.ai.tool.annotation.ToolParam;
 import org.springframework.expression.Expression;
 import org.springframework.expression.ExpressionParser;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
@@ -14,7 +15,7 @@ public class CalculatorMcpServer {
     private final ExpressionParser parser = new SpelExpressionParser();
 
     @Tool(description = "计算数学表达式的结果")
-    public String calculate(CalculatorFunctionRequest request) {
+    public String calculate(@ToolParam(description = "参数对象") CalculatorFunctionRequest request) {
         String expression = request.expression();
         log.info("开始计算数学表达式：{}", expression);
         
@@ -76,7 +77,7 @@ public class CalculatorMcpServer {
         
         // 处理表达式末尾的数字
         if (inNumber) {
-            if (!hasDecimal && number.length() > 0) {
+            if (!hasDecimal && !number.isEmpty()) {
                 number.append(".0");
             }
             result.append(number);

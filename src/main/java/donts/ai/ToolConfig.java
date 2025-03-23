@@ -1,7 +1,7 @@
 package donts.ai;
 
-import donts.ai.calculator.CalculatorMcpServer;
-import donts.ai.weather.WeatherMcpServer;
+import donts.ai.demo.calculator.CalculatorMcpServer;
+import donts.ai.demo.weather.WeatherMcpServer;
 import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.ai.tool.method.MethodToolCallbackProvider;
 import org.springframework.context.annotation.Bean;

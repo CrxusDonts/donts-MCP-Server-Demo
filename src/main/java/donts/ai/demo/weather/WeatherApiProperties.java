@@ -1,4 +1,4 @@
-package donts.ai.weather;
+package donts.ai.demo.weather;
 
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
