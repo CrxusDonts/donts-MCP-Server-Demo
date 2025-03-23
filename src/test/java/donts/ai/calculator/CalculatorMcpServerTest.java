@@ -9,7 +9,7 @@ class CalculatorMcpServerTest {
     @Test
     void calculate() {
         CalculatorFunctionRequest request = new CalculatorFunctionRequest(
-                "(2.5 * T(Math).pow(3, 2) + T(Math).sqrt(144)) / (T(Math).log10(100) + T(Math).sin(T(Math).PI/6)) - T(Math).abs(-7) * (15 % 4) + 5.5"
+                "((15.75 * 4.2 + 36.8) / (2.5 - 1.3)) * ((87.6 / 4 - 12.9) + (56.2 * 3.1 - 45.6)) / (18.4 + 7.6 * 2.3 - 5.8)"
         );
         CalculatorMcpServer calculatorMcpServer = new CalculatorMcpServer();
         String result = calculatorMcpServer.calculate(request);
