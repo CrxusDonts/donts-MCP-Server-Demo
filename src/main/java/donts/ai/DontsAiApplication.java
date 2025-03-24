@@ -1,6 +1,6 @@
 package donts.ai;
 
-import donts.ai.demo.weather.WeatherApiProperties;
+import donts.ai.demo.tools.weather.WeatherApiProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

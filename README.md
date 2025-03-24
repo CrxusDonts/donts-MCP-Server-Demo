@@ -22,14 +22,20 @@ Model Context Protocol (MCP) 是Spring AI提供的一种协议，允许大语言
 ```
 src/main/java/donts/ai/
 ├── DontsAiApplication.java         # 应用程序入口
-├── calculator/                     # 计算器服务
-│   ├── CalculatorFunctionRequest.java
-│   └── CalculatorMcpServer.java
-└── weather/                        # 天气查询服务
-    ├── WeatherApiProperties.java
-    ├── WeatherFunctionRequest.java
-    ├── WeatherFunctionResponse.java
-    └── WeatherMcpServer.java
+├── demo/                           # 演示功能包
+│   ├── mcp_resources/              # MCP资源配置
+│   │   ├── ResourceConfig.java     # 资源配置类
+│   │   └── SystemResource.java     # 系统资源类
+│   └── tools/                      # 工具服务
+│       ├── ToolConfig.java         # 工具配置类
+│       ├── calculator/             # 计算器服务
+│       │   ├── CalculatorFunctionRequest.java
+│       │   └── CalculatorMcpServer.java
+│       └── weather/                # 天气查询服务
+│           ├── WeatherApiProperties.java
+│           ├── WeatherFunctionRequest.java
+│           ├── WeatherFunctionResponse.java
+│           └── WeatherMcpServer.java
 ```
 
 ## 功能说明
@@ -48,7 +54,35 @@ src/main/java/donts/ai/
 
 示例：
 - 输入：`昆明`
-- 输出：城市北京的实时天气信息（JSON格式）
+- 输出：城市昆明的实时天气信息（JSON格式）
+
+### MCP 资源
+
+MCP 资源（Resource）是 Model Context Protocol 协议中的一个重要概念，代表服务器想要提供给客户端的任何类型的数据。本项目实现了以下资源：
+
+#### 系统信息资源
+
+系统信息资源提供关于运行环境的基本信息，包括：
+
+- Java 运行时版本
+- 操作系统信息（名称、版本、架构）
+- 处理器数量
+- 当前时间戳
+
+资源URI：`system://info`
+MIME类型：`application/json`
+
+示例输出：
+```json
+{
+  "javaVersion": "17.0.10",
+  "osName": "Mac OS X",
+  "osVersion": "14.4",
+  "osArch": "aarch64",
+  "processors": 10,
+  "timestamp": 1711301234567
+}
+```
 
 ## 配置说明
 注意，我之后要使用windsurf来调用这个MCP Server，由于windsurf只支持STDIO的输出模式，所以需要把web
@@ -122,7 +156,7 @@ mvn clean package
 
 2. **查询城市天气**：
    - 工具名称：`getWeather`
-   - 参数：`{"city": "北京"}`
+   - 参数：`{"city": "昆明"}`
 
 ## 注意事项
 

@@ -1,4 +1,4 @@
-package donts.ai.demo.calculator;
+package donts.ai.demo.tools.calculator;
 
 
 import org.springframework.ai.tool.annotation.ToolParam;

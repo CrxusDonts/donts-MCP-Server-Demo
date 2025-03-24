@@ -1,4 +1,4 @@
-package donts.ai.demo.weather;
+package donts.ai.demo.tools.weather;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

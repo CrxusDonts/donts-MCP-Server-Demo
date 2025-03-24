@@ -1,7 +1,7 @@
 package donts.ai.calculator;
 
-import donts.ai.demo.calculator.CalculatorFunctionRequest;
-import donts.ai.demo.calculator.CalculatorMcpServer;
+import donts.ai.demo.tools.calculator.CalculatorFunctionRequest;
+import donts.ai.demo.tools.calculator.CalculatorMcpServer;
 import org.junit.jupiter.api.Test;
 
 class CalculatorMcpServerTest {

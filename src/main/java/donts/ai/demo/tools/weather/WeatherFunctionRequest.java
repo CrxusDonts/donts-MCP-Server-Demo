@@ -1,4 +1,4 @@
-package donts.ai.demo.weather;
+package donts.ai.demo.tools.weather;
 
 import org.springframework.ai.tool.annotation.ToolParam;
 

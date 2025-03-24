@@ -1,4 +1,4 @@
-package donts.ai.demo.weather;
+package donts.ai.demo.tools.weather;
 
 import cn.hutool.http.HttpResponse;
 import cn.hutool.http.HttpUtil;
