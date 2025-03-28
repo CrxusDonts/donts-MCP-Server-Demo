@@ -1,0 +1,24 @@
+
+spring:
+  ai:
+    mcp:
+      server:
+        name: webflux-mcp-server
+        version: 1.0.0
+        type: ASYNC  # Recommended for reactive applications
+        sse-message-endpoint: /mcp/messages/
+
+
+
+logging:
+  file:
+    name: mcp-weather-webflux-server.log
+  level:
+    org:
+        springframework:
+            ai: DEBUG
+
+# Weather API Configuration
+weather:
+  api:
+    api-key: 你的API_KEY
